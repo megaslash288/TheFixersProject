@@ -26,7 +26,7 @@ def render_career_pathways():
         max_salaries = [int(r[1]) for r in salary_ranges]
         
         # Salary range visualization
-        fig = px.line_scatter(
+        fig = px.line(
             x=levels,
             y=[(min_sal + max_sal) / 2 for min_sal, max_sal in zip(min_salaries, max_salaries)],
             error_y=[max_sal - ((min_sal + max_sal) / 2) for min_sal, max_sal in zip(min_salaries, max_salaries)],
