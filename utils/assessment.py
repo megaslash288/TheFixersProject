@@ -3,12 +3,23 @@ def calculate_trade_match(answers):
     scores = {
         "Electrical": 0,
         "Plumbing": 0,
-        "Welding": 0
+        "Welding": 0,
+        "Carpenter": 0,
+        "Construction": 0,
+        "HVAC Technician": 0,
+        "Fire Inspector": 0,
+        "Brickmason": 0,
+        "Painter": 0,
+        "Roofer": 0,
+        "Trucker": 0,
+        "Heavy Equipment Operator": 0,
+        "Drywaller/Plasterer": 0,
+        "Steelworker": 0
     }
     
     # Process mechanical aptitude
     if answers["mechanical_aptitude"] >= 4:
-        scores["Electrical"] += 2
+        scores[" "] += 3
         scores["Plumbing"] += 2
         scores["Welding"] += 2
 
@@ -27,6 +38,8 @@ def calculate_trade_match(answers):
         scores["Electrical"] += 3
         scores["Welding"] += 2
 
+    # Process aptitude for people skills
+    if answers[""]
     # Normalize scores
     max_score = max(scores.values())
     if max_score > 0:
@@ -37,7 +50,7 @@ def calculate_trade_match(answers):
 ASSESSMENT_QUESTIONS = [
     {
         "id": "mechanical_aptitude",
-        "question": "How comfortable are you working with tools and machinery?",
+        "question": "How comfortable are you working with high powered machinery?",
         "type": "slider",
         "min": 1,
         "max": 5
