@@ -2,6 +2,7 @@ import requests
 import json
 import pandas as pd
 
+#Importing data from bls
 headers = {'Content-type': 'application/json'}
 data = json.dumps({"seriesid": ['WMU00311401020000004721112500','WMU00311401020000004720312500', 'WMU00311401020000001190212400','WMU00311401020000004990212500','OEUM003114000000033202103','OEUM003114000000047202103',
                                 'OEUM003114000000047214103','OEUM003114000000047218103','WMU00311401020000004721522500','WMU00311401020000005330322500','OEUM003114000000051412203','OEUM003114000000047208103','OEUM003114000000047222103'
@@ -9,6 +10,7 @@ data = json.dumps({"seriesid": ['WMU00311401020000004721112500','WMU003114010200
 p = requests.post('https://api.bls.gov/publicAPI/v2/timeseries/data/', data=data, headers=headers)
 json_data = json.loads(p.text)
 
+#Iterating through json and grabbing information from each
 data_list = []
 for series in json_data['Results']['series']:
     series_id = series['seriesID']
