@@ -1,0 +1,4 @@
+plotly
+streamlit
+tomli
+twilio
