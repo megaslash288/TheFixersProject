@@ -42,7 +42,7 @@ def get_links_for_schools(url):
 	return links_dict
 
 st.header("Trade Schools in Kentucky")
-schools_list, *_ = st.columns(1)
+schools_list, *_ = st.columns(1) # only need one var
 
 for school_name, school_website in get_links_for_schools(url).items():
 	schools_list.link_button(school_name, school_website)
