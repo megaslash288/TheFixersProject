@@ -42,7 +42,7 @@ def main():
         with cols[idx]:
             st.markdown(f"### {trade}")
             st.markdown(f"**Average Salary:** ${details['avg_salary']:,}")
-            st.markdown(f"**Growth Rate:** {details['demand_growth']}")
+            #st.markdown(f"**Growth Rate:** {details['demand_growth']}")
             st.markdown(f"**Duration:** {details['duration']}")
             st.button(f"Learn More About {trade}", key=f"learn_more_{trade}")
 
