@@ -1,6 +1,7 @@
 import streamlit as st
 from data.trade_programs import TRADE_PROGRAMS
 import plotly.express as px
+import BLS_Import
 
 st.set_page_config(
     page_title="Trade Career Explorer",
@@ -67,6 +68,9 @@ def main():
              caption="Real Stories from Trade Professionals")
     if st.button("View All Success Stories"):
         st.switch_page("pages/4_success_stories.py")
+    
+    #generatecsv
+    BLS_Import.CreateCSV()
 
 if __name__ == "__main__":
     main()
