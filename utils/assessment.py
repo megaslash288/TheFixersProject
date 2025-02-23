@@ -5,7 +5,7 @@ def calculate_trade_match(answers):
         "Plumbing": 0,
         "Welding": 0,
         "Carpenter": 0,
-        "Construction": 0,
+        #"Construction": 0,
         "HVAC Technician": 0,
         "Fire Inspector": 0,
         "Brickmason": 0,
@@ -18,18 +18,18 @@ def calculate_trade_match(answers):
     
     # Process comfort around heavy machinery
     if answers["mechanical_aptitude"] >= 4:
-        scores["Construction"] += 1
+        #scores["Construction"] += 1
         scores["Steelworker"] += 1
 
     if answers["mechanical_aptitude"] >= 3:
-        scores["Construction"] += 1
+        #scores["Construction"] += 1
         scores["Steelworker"] += 1
         scores["Welding"] += 1
         scores["Trucker"] += 1
         scores["Electrical"]
          
     if answers["mechanical_aptitude"] >= 2:
-        scores["Construction"] += 1
+        #scores["Construction"] += 1
         scores["Welding"] += 1
         scores["Trucker"] += 1
         scores["Steelworker"] += 1
@@ -79,14 +79,14 @@ def calculate_trade_match(answers):
     if answers["physical_work"] >= 4:
         scores["Carpenter"] += 1
         scores["Roofer"] += 1
-        scores["Construction"] += 1
+        #scores["Construction"] += 1
         
     if answers["physical_work"] >= 3:
         scores["Welding"] += 1
         scores["Roofer"] += 1
         scores["Drywaller/Plasterer"] += 1
         scores["Brickmason"] += 1
-        scores["Construction"] += 1
+        #scores["Construction"] += 1
         scores["Steelworker"] += 1
 
     if answers["physical_work"] >= 2:
@@ -95,7 +95,7 @@ def calculate_trade_match(answers):
         scores["Roofer"] += 1
         scores["Drywaller/Plasterer"] += 1
         scores["Brickmason"] += 1
-        scores["Construction"] += 1
+        #scores["Construction"] += 1
         scores["Steelworker"] += 1
 
     # Process attention to detail
