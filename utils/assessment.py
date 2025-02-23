@@ -102,8 +102,6 @@ def calculate_trade_match(answers):
     if answers["detail_oriented"] >= 4:
         scores["Electrical"] += 1
         scores["Fire Inspector"] += 2
-        
-
 
     if answers["detail_oriented"] >= 3:
         scores["Electrical"] += 1
