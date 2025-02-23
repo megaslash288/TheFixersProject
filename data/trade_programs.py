@@ -37,7 +37,7 @@ TRADE_PROGRAMS = {
         ]
     },
     "Carpenter": {
-        "description": "Insert Carpenter description here. there is probably wood involved",
+        "description": "Construct, repair, and maintain structures made of wood",
         "duration": "2 years",
         "avg_salary": retrieve_wage("Carpenter"),
         #"demand_growth": 300000%,
@@ -117,7 +117,7 @@ TRADE_PROGRAMS = {
         ]
     },    
     "Steelworker": {
-        "description": "Insert Steelworker description here. there is probably a steel mill involved",
+        "description": "Installing, cutting, and managing steel on construction sites",
         "duration": "2 years",
         "avg_salary": retrieve_wage("Steel Worker"),
         #"demand_growth": 300000%,
