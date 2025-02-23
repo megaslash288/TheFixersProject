@@ -74,7 +74,7 @@ def CreateCSV():
     #Above is each trade's average yearly rate for a full time tradesman
 
     # Display DataFrame
-    print(df)
+    #print(df)
 
     #to CSV to be used everywhere else
     df.to_csv(r'./TradeIncome.csv', index=None)

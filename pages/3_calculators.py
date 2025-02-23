@@ -29,7 +29,7 @@ def render_calculators():
         # Set the current salary to avg_salary of the selected trade
         current_salary = TRADE_PROGRAMS[selected_trade]["avg_salary"]
         print(current_salary)
-        st.metric("Current Annual Salary", f"${current_salary:.2f}")
+        st.metric("Current Annual Salary", f"${current_salary:,.2f}")
 
         years_to_calculate = st.slider(
             "Years to Calculate ROI",
