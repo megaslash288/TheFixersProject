@@ -2,6 +2,7 @@ import streamlit as st
 import plotly.express as px
 from data.trade_programs import TRADE_PROGRAMS
 
+
 st.set_page_config(page_title="Trade Programs", page_icon="🎓")
 
 def render_trade_programs():
@@ -42,7 +43,7 @@ def render_trade_programs():
             
             **Duration:** {program['duration']}
             
-            **Average Salary:** ${program['avg_salary']:,}
+            **Average Salary:** ${program['avg_salary']}
             
             **Certification:** {program['certification']}
             """)
