@@ -31,7 +31,7 @@ def CreateCSV():
     df = pd.DataFrame(data_list)
 
     #Rename files imports by trade
-    df.loc[df.Trade == 'WMU0031 1401020000004721112500', 'Trade'] = 'Electrician'
+    df.loc[df.Trade == 'WMU00311401020000004721112500', 'Trade'] = 'Electrician'
     df.loc[df.Trade == 'WMU00311401020000004720312500', 'Trade'] = 'Carpenter'
     df.loc[df.Trade == 'WMU00311401020000001190212400', 'Trade'] = 'Construction Manager'
     df.loc[df.Trade == 'WMU00311401020000004990212500', 'Trade'] = 'HVAC'

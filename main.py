@@ -70,7 +70,8 @@ def main():
         st.switch_page("pages/4_success_stories.py")
     
     #generatecsv
-   # BLS_Import.CreateCSV()
+    # for testing purposes, the bls import is commented out so that its not using up the limited number of calls we have.
+    #BLS_Import.CreateCSV()
 
 if __name__ == "__main__":
     main()

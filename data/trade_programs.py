@@ -1,8 +1,21 @@
+import csv
+
+#opens the csv for use as list of dictionaries
+with open('TradeIncome.csv', mode='r') as file:
+    csv_reader = csv.DictReader(file)
+    list_of_dict_data = []
+    for row in csv_reader:
+        list_of_dict_data.append(row)
+#remove everything that isnt an annual earnings value
+list_of_dict_data = [element for element in list_of_dict_data if element["Trade"].startswith("Annual")]
+print(list_of_dict_data)
+
+
 TRADE_PROGRAMS = {
     "Electrical": {
         "description": "Learn to install, maintain, and repair electrical systems",
         "duration": "4 years",
-        "avg_salary": 56000,
+        "avg_salary": 4,
         #"demand_growth": "14%",
         "certification": "Licensed Electrician",
         "programs": [
