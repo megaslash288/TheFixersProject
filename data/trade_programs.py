@@ -1,14 +1,5 @@
 import csv
-
-#opens the csv for use as list of dictionaries
-with open('TradeIncome.csv', mode='r') as file:
-    csv_reader = csv.DictReader(file)
-    list_of_dict_data = []
-    for row in csv_reader:
-        list_of_dict_data.append(row)
-#remove everything that isnt an annual earnings value
-list_of_dict_data = [element for element in list_of_dict_data if element["Trade"].startswith("Annual")]
-print(list_of_dict_data)
+from utils.UnpackCSVFunction import retrieve_wage
 
 
 TRADE_PROGRAMS = {
@@ -20,7 +11,7 @@ TRADE_PROGRAMS = {
         "certification": "Licensed Electrician",
         "programs": [
             {"name": "Residential Electrician", "duration": "2 years", "cost": 15000},
-            {"name": "Industrial Electrician", "duration": "4 years", "cost": 25000},
+            {"name": "Industrial Electrician", "duration": "4 years", "cost": 25000}
         ]
     },
     "Plumbing": {
@@ -31,7 +22,7 @@ TRADE_PROGRAMS = {
         "certification": "Licensed Plumber",
         "programs": [
             {"name": "Residential Plumbing", "duration": "2 years", "cost": 14000},
-            {"name": "Commercial Plumbing", "duration": "4 years", "cost": 24000},
+            {"name": "Commercial Plumbing", "duration": "4 years", "cost": 24000}
         ]
     },
     "Welding": {
@@ -42,7 +33,7 @@ TRADE_PROGRAMS = {
         "certification": "Certified Welder",
         "programs": [
             {"name": "Basic Welding", "duration": "1 year", "cost": 12000},
-            {"name": "Advanced Welding", "duration": "2 years", "cost": 20000},
+            {"name": "Advanced Welding", "duration": "2 years", "cost": 20000}
         ]
     },
     "Carpenter": {
@@ -52,7 +43,7 @@ TRADE_PROGRAMS = {
         #"demand_growth": 300000%,
         "certification": "Certified Carpenter",
         "programs": [
-            {"name": "carpentry", "duration": "1 year", "cost": 14000},
+            {"name": "carpentry", "duration": "1 year", "cost": 14000}
         ]
     },
     "HVAC Technician": {
@@ -62,7 +53,7 @@ TRADE_PROGRAMS = {
         #"demand_growth": 300000%,
         "certification": "Certified HVAC Technician",
         "programs": [
-            {"name": "HVAC tech", "duration": "1 year", "cost": 14000},
+            {"name": "HVAC tech", "duration": "1 year", "cost": 14000}
         ]
     },
     "Fire Inspector": {
@@ -72,7 +63,7 @@ TRADE_PROGRAMS = {
         #"demand_growth": 300000%,
         "certification": "Certified Fire Inspector",
         "programs": [
-            {"name": "Fire inspector", "duration": "1 year", "cost": 14000},
+            {"name": "Fire inspector", "duration": "1 year", "cost": 14000}
         ]
     },
     "Brickmason": {
@@ -82,7 +73,7 @@ TRADE_PROGRAMS = {
         #"demand_growth": 300000%,
         "certification": "Certified Mason",
         "programs": [
-            {"name": "Masonry", "duration": "1 year", "cost": 14000},
+            {"name": "Masonry", "duration": "1 year", "cost": 14000}
         ]
     },
     "Painter": {
@@ -92,7 +83,7 @@ TRADE_PROGRAMS = {
         #"demand_growth": 300000%,
         "certification": "None",
         "programs": [
-            {"name": "Painter", "duration": "1 year", "cost": 14000},
+            {"name": "Painter", "duration": "1 year", "cost": 14000}
         ]
     },
     "Roofer": {
@@ -102,7 +93,7 @@ TRADE_PROGRAMS = {
         #"demand_growth": 300000%,
         "certification": "Certified Roofer",
         "programs": [
-            {"name": "Roofing", "duration": "1 year", "cost": 14000},
+            {"name": "Roofing", "duration": "1 year", "cost": 14000}
         ]
     },
     "Trucker": {
@@ -112,7 +103,7 @@ TRADE_PROGRAMS = {
         #"demand_growth": 300000%,
         "certification": "CDL License, Residential Driver's License",
         "programs": [
-            {"name": "CDL Truck driver", "duration": "1 year", "cost": 14000},
+            {"name": "CDL Truck driver", "duration": "1 year", "cost": 14000}
         ]
     },    
     "Drywaller/Plasterer": {
@@ -122,7 +113,7 @@ TRADE_PROGRAMS = {
         #"demand_growth": 300000%,
         "certification": "Plasterer Apprenticeship",
         "programs": [
-            {"name": "Plasterer", "duration": "1 year", "cost": 14000},
+            {"name": "Plasterer", "duration": "1 year", "cost": 14000}
         ]
     },    
     "Steelworker": {
@@ -132,7 +123,9 @@ TRADE_PROGRAMS = {
         #"demand_growth": 300000%,
         "certification": "Certified Steelworker",
         "programs": [
-            {"name": "Steelworker", "duration": "1 year", "cost": 14000},
+            {"name": "Steelworker", "duration": "1 year", "cost": 14000}
         ]
-    },
+    }
 }
+
+print(TRADE_PROGRAMS{"Electrical"})
