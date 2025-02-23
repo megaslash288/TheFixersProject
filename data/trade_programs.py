@@ -1,12 +1,12 @@
 import csv
-from utils.UnpackCSVFunction import retrieve_wage
+from UnpackCSVFunction import retrieve_wage
 
 
 TRADE_PROGRAMS = {
     "Electrical": {
         "description": "Learn to install, maintain, and repair electrical systems",
         "duration": "4 years",
-        "avg_salary": 4,
+        "avg_salary": retrieve_wage("Electrician"),
         #"demand_growth": "14%",
         "certification": "Licensed Electrician",
         "programs": [
@@ -17,7 +17,7 @@ TRADE_PROGRAMS = {
     "Plumbing": {
         "description": "Master the installation and repair of piping systems",
         "duration": "4 years",
-        "avg_salary": 53000,
+        "avg_salary": retrieve_wage("Plumber"),
         #"demand_growth": "12%",
         "certification": "Licensed Plumber",
         "programs": [
@@ -28,7 +28,7 @@ TRADE_PROGRAMS = {
     "Welding": {
         "description": "Learn various welding techniques and metal fabrication",
         "duration": "2 years",
-        "avg_salary": 44000,
+        "avg_salary": retrieve_wage("Welder"),
         #"demand_growth": "8%",
         "certification": "Certified Welder",
         "programs": [
@@ -39,7 +39,7 @@ TRADE_PROGRAMS = {
     "Carpenter": {
         "description": "Insert Carpenter description here. there is probably wood involved",
         "duration": "2 years",
-        "avg_salary": 55555,
+        "avg_salary": retrieve_wage("Carpenter"),
         #"demand_growth": 300000%,
         "certification": "Certified Carpenter",
         "programs": [
@@ -49,7 +49,7 @@ TRADE_PROGRAMS = {
     "HVAC Technician": {
         "description": "Installing, maintaining, and repairing HVAC systems in both residential and commercial settings",
         "duration": "2 years",
-        "avg_salary": 55555,
+        "avg_salary": retrieve_wage("HVAC"),
         #"demand_growth": 300000%,
         "certification": "Certified HVAC Technician",
         "programs": [
@@ -59,7 +59,7 @@ TRADE_PROGRAMS = {
     "Fire Inspector": {
         "description": "Ensuring that a location is up to fire safety codes",
         "duration": "2 years",
-        "avg_salary": 55555,
+        "avg_salary": retrieve_wage("Fire Inspector"),
         #"demand_growth": 300000%,
         "certification": "Certified Fire Inspector",
         "programs": [
@@ -69,7 +69,7 @@ TRADE_PROGRAMS = {
     "Brickmason": {
         "description": "Laying and maintaining concrete and brick masonry in both residential and commercial settings",
         "duration": "2 years",
-        "avg_salary": 55555,
+        "avg_salary": retrieve_wage("Brickmason"),
         #"demand_growth": 300000%,
         "certification": "Certified Mason",
         "programs": [
@@ -79,7 +79,7 @@ TRADE_PROGRAMS = {
     "Painter": {
         "description": "Painting interior and exterior walls and structures in both residential and commercial settings",
         "duration": "2 years",
-        "avg_salary": 55555,
+        "avg_salary": retrieve_wage("Painter"),
         #"demand_growth": 300000%,
         "certification": "None",
         "programs": [
@@ -89,7 +89,7 @@ TRADE_PROGRAMS = {
     "Roofer": {
         "description": "Laying tile and shingles on roofs and maintaining roofs in both commercial and residential settings",
         "duration": "2 years",
-        "avg_salary": 55555,
+        "avg_salary": retrieve_wage("Roofer"),
         #"demand_growth": 300000%,
         "certification": "Certified Roofer",
         "programs": [
@@ -99,7 +99,7 @@ TRADE_PROGRAMS = {
     "Trucker": {
         "description": "Operating a semi-truck to move cargo both locally and around the country",
         "duration": "1 year",
-        "avg_salary": 55555,
+        "avg_salary": retrieve_wage("Trucker"),
         #"demand_growth": 300000%,
         "certification": "CDL License, Residential Driver's License",
         "programs": [
@@ -109,7 +109,7 @@ TRADE_PROGRAMS = {
     "Drywaller/Plasterer": {
         "description": "Installing drywall or plaster in construction environments",
         "duration": "1 year",
-        "avg_salary": 55555,
+        "avg_salary": retrieve_wage("Drywall"),
         #"demand_growth": 300000%,
         "certification": "Plasterer Apprenticeship",
         "programs": [
@@ -119,7 +119,7 @@ TRADE_PROGRAMS = {
     "Steelworker": {
         "description": "Insert Steelworker description here. there is probably a steel mill involved",
         "duration": "2 years",
-        "avg_salary": 55555,
+        "avg_salary": retrieve_wage("Steel Worker"),
         #"demand_growth": 300000%,
         "certification": "Certified Steelworker",
         "programs": [
@@ -128,4 +128,3 @@ TRADE_PROGRAMS = {
     }
 }
 
-print(TRADE_PROGRAMS{"Electrical"})
