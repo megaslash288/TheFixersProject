@@ -1,5 +1,5 @@
 import streamlit as st
-import streamlit_carousel as stc
+#import streamlit_carousel as stc
 # from data.trade_programs import TRADE_PROGRAMS
 from data.career_paths import CAREER_PATHS
 import plotly.express as px
