@@ -1,5 +1,5 @@
-import csv
-from utils.UnpackCSVFunction import retrieve_wage
+# import csv
+# from utils.UnpackCSVFunction import retrieve_wage
 
 
 TRADE_PROGRAMS = {
@@ -127,5 +127,3 @@ TRADE_PROGRAMS = {
         ]
     }
 }
-
-print(TRADE_PROGRAMS{"Electrical"})
